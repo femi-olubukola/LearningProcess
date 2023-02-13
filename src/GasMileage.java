@@ -44,25 +44,23 @@ import java.util.Scanner;
 public class GasMileage {
     public static void main(String[] args) {
 
-        int milesDriven;
-        int gallonsUsed;
         int totalMilesDriven = 0;
         int totalGallonsUsed = 0;
 
         Scanner input = new Scanner(System.in);
 
         System.out.println("enter miles driven or -1 to terminate: ");
-        milesDriven = input.nextInt();
+        int milesDriven = input.nextInt();
 
         while (milesDriven != -1) {
 
             totalMilesDriven = totalMilesDriven + milesDriven;
 
             System.out.println("enter gallons used: ");
-            gallonsUsed = input.nextInt();
+            int gallonsUsed = input.nextInt();
             totalGallonsUsed = totalGallonsUsed + gallonsUsed;
 
-            double milesPerGallon = (double) milesDriven/gallonsUsed;
+            double milesPerGallon = (double) milesDriven/ (double) gallonsUsed;
             System.out.println("average for this one trip: " + milesPerGallon);
 
             System.out.println("enter miles driven or -1 to terminate: ");
