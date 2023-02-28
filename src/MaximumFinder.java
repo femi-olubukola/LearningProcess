@@ -29,19 +29,22 @@ public class MaximumFinder {
     // returns the maximum of its three double parameters
     public static double maximum( double x, double y, double z) {
 
-        double maximumValue = x; // assume x is the largest to start
+//        double maximumValue = x; // assume x is the largest to start
+//
+//        // determine whether y is greater than maximumValue
+//        if (y > maximumValue) {
+//            maximumValue = y;
+//        }
+//
+//        // determine whether z is greater than maximumValue
+//        if (z > maximumValue) {
+//            maximumValue = z;
+//        }
+//
+//        return maximumValue;
 
-        // determine whether y is greater than maximumValue
-        if (y > maximumValue) {
-            maximumValue = y;
-        }
-
-        // determine whether z is greater than maximumValue
-        if (z > maximumValue) {
-            maximumValue = z;
-        }
-
-        return maximumValue;
+        // a good example of method reuse (instead of the code above)
+        return Math.max(x, Math.max(y, z));
 
     }
 }
