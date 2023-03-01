@@ -21,7 +21,7 @@ public class RandomIntegers {
             // if counter is divisible by 5, start a new line of output
             if (counter % 5 == 0) {
                 System.out.println();
-        }
+            }
         }
     }
 } // end class RandomIntegers
