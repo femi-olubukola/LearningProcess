@@ -59,5 +59,10 @@ public class RollDie {
         System.out.println( "4" + "             " + frequency4);
         System.out.println( "5" + "             " + frequency5);
         System.out.println( "6" + "             " + frequency6);
+
+        System.out.println("Face\tFrequency"); // output headers
+        System.out.printf("1\t%d%n2\t%d%n3\t%d%n4\t%d%n5\t%d%n6\t%d%n",
+                frequency1, frequency2, frequency3, frequency4,
+                frequency5, frequency6);
     }
 }
