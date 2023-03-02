@@ -23,6 +23,8 @@ public class Time1Test {
             System.out.println("Exception is " + e.getMessage());
         }
 
+        System.out.println();
+
         // display time after attempt to set invalid values
         displayTime("After calling setTime with invalid values", time);
     }
@@ -32,5 +34,9 @@ public class Time1Test {
         // displays a Time1 object in 24-hour and 12-hour formats
         System.out.printf("%s%nUniversal time: %s%nStandard time: %s%n",
                 header, time.toUniversalString() , time.toString());
+
+//        System.out.println(header);
+//        System.out.println("Universal Time is " + time.toUniversalString());
+//        System.out.println("Standard Time is " + time.toString());
     }
 }
