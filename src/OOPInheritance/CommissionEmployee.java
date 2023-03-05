@@ -52,6 +52,7 @@ public class CommissionEmployee extends Object {
     // get gross sales amount
     public void setGrossSales(double grossSales) {
 
+        // validate
         if (grossSales < 0.0) {
             throw new IllegalArgumentException(
                     "Gross sales must be >= 0.0");
@@ -68,6 +69,7 @@ public class CommissionEmployee extends Object {
     // set commission rate
     public void setCommissionRate(double commissionRate) {
 
+        // validate
         if (commissionRate < 0.0 || commissionRate >= 1.0) {
             throw new IllegalArgumentException(
                     "Commission rate must be > 0.0 and < 1.0");
