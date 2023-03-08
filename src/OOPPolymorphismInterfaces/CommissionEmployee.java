@@ -40,6 +40,7 @@ public class CommissionEmployee extends Employee {
 
     // return gross sales amount
     public double getGrossSales() {
+
         return grossSales;
     }
 
@@ -55,7 +56,7 @@ public class CommissionEmployee extends Employee {
         this.commissionRate = commissionRate;
     }
 
-    // get commission rate
+    // return commission rate
     public double getCommissionRate() {
 
         return commissionRate;
@@ -65,7 +66,7 @@ public class CommissionEmployee extends Employee {
     @Override
     public double earnings() {
 
-        return commissionRate * grossSales;
+        return getCommissionRate() * getGrossSales();
     }
 
     // return String representation of CommissionEmployee object
