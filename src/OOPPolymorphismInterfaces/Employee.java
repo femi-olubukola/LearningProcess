@@ -28,7 +28,7 @@ public abstract class Employee {
     }
 
     // return String representation of Employee object
-//    @Override
+    @Override
     public String toString() {
         return String.format("%s %s%nsocial security number: %s",
                 getFirstName(), getLastName(), getSocialSecurityNumber());
