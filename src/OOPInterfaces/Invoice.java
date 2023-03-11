@@ -27,4 +27,5 @@ public class Invoice {
         this.pricePerItem = pricePerItem;
     } // end constructor
 
+    // get part number
 }
