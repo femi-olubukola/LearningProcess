@@ -28,4 +28,12 @@ public class Invoice {
     } // end constructor
 
     // get part number
+    public String getPartNumber() {
+        return partNumber;
+    }
+
+    // get description
+    public String getPartDescription() {
+        return partDescription;
+    }
 }
