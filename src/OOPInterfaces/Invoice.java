@@ -36,4 +36,9 @@ public class Invoice {
     public String getPartDescription() {
         return partDescription;
     }
+
+    // get quantity
+    public int getQuantity() {
+        return quantity;
+    }
 }
