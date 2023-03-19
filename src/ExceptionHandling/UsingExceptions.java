@@ -16,4 +16,23 @@ public class UsingExceptions {
 
         doesNotThrowException();
     }
+
+    // demonstrate try...catch...finally
+    public static void throwException() throws Exception {
+        try // throw an exception and immediately catch it
+        {
+            System.out.println("Method throwException");
+
+            }
+        catch (Exception exception) // catch exception thrown in try
+        {
+            System.err.println(
+                    "Exception handled in method throwException");
+
+            // code here would not be reached; would cause compilation errors
+
+            }
+
+        // code here would not be reached; would cause compilation errors
+        }
 }
