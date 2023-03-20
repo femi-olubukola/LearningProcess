@@ -32,6 +32,10 @@ public class UsingExceptions {
             // code here would not be reached; would cause compilation errors
 
             }
+        finally // executes regardless of what occurs in try...catch
+        {
+            System.err.println("Finally executed in throwException");
+        }
 
         // code here would not be reached; would cause compilation errors
         }
