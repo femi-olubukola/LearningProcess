@@ -27,6 +27,22 @@ public class UsingExceptions1 {
                 System.out.printf("%s%n", element.getMethodName());
             }
         }
+    }
 
+    // call method2; throw exceptions back to main
+    public static void method1() throws Exception
+    {
+        method2();
+    }
+    // call method3; throw exceptions back to method1
+    public static void method2() throws Exception
+    {
+        method3();
+    }
+
+    // throw Exception back to method2
+    public static void method3() throws Exception
+    {
+        throw new Exception("Exception thrown in method3");
     }
 }
