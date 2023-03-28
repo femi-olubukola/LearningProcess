@@ -12,9 +12,9 @@ public class AssertTest {
         int number = input.nextInt();
 
         // assert that the value is >= 0 and <= 10
-//        assert (number >= 0 && number <= 10) : "bad number: " + number;
+        assert (number >= 0 && number <= 10) : "bad number: " + number;
 
-        if ((number < 0 || number > 10)) throw new AssertionError("bad number: " + number);
+//        if ((number < 0 || number > 10)) throw new AssertionError("bad number: " + number);
 
         System.out.printf("You entered %d%n", number);
         }
