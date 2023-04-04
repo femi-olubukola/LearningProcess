@@ -43,5 +43,12 @@ public class StringCompare {
                 "%ns3.compareTo(s4) is %d", s3.compareTo(s4));
         System.out.printf(
                 "%ns4.compareTo(s3) is %d%n%n", s4.compareTo(s3));
+
+        // test regionMatches (case sensitive)
+        if (s3.regionMatches(0, s4, 0, 5))
+            System.out.println("First 5 characters of s3 and s4 match");
+        else
+        System.out.println(
+                "First 5 characters of s3 and s4 do not match");
     }
 }
