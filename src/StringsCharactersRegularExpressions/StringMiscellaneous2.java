@@ -18,5 +18,17 @@ public class StringMiscellaneous2 {
         // test toLowerCase and toUpperCase
         System.out.printf("s1.toUpperCase() = %s%n", s1.toUpperCase());
         System.out.printf("s2.toLowerCase() = %s%n%n", s2.toUpperCase());
+
+        // test trim method
+        System.out.printf("s3 after trim = \"%s\"%n%n", s3.trim());
+
+        // test toCharArray method
+        char[] charArray = s1.toCharArray();
+        System.out.print("s1 as a character array = ");
+
+        for (char character : charArray)
+            System.out.print(character);
+
+        System.out.println();
     }
 }
