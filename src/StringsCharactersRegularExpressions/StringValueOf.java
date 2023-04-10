@@ -22,5 +22,11 @@ public class StringValueOf {
                 "boolean = %s%n", String.valueOf(booleanValue));
         System.out.printf(
                 "char = %s%n", String.valueOf(characterValue));
+        System.out.printf("int = %s%n", String.valueOf(integerValue));
+        System.out.printf("long = %s%n", String.valueOf(longValue));
+        System.out.printf("float = %s%n", String.valueOf(floatValue));
+        System.out.printf(
+                "double = %s%n", String.valueOf(doubleValue));
+        System.out.printf("Object = %s", String.valueOf(objectRef));
     }
 }
