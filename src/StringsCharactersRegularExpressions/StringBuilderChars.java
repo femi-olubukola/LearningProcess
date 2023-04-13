@@ -15,6 +15,15 @@ public class StringBuilderChars {
         buffer.getChars(0, buffer.length(), charArray, 0);
         System.out.print("The characters are: ");
 
+        for (char character : charArray)
+            System.out.print(character);
+
+        buffer.setCharAt(0, 'H');
+        buffer.setCharAt(6, 'T');
+        System.out.printf("%n%nbuffer = %s", buffer.toString());
+
+        buffer.reverse();
+        System.out.printf("%n%nbuffer = %s%n", buffer.toString());
 
     }
 }
