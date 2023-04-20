@@ -37,4 +37,18 @@ public class ValidateInput {
         return state.matches(
                 "([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
     }
+
+    // validate zip
+    public static boolean validateZip(String zip) {
+
+        return zip.matches(
+                "\\d{5}");
+    }
+
+    // validate phone
+    public static boolean validatePhone(String phone) {
+
+        return phone.matches(
+                "[1-9]\\d{2}-[1-9]\\d{2}-\\d{4}");
+    }
 }
