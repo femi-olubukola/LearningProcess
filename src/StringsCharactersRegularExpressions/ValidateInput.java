@@ -7,7 +7,7 @@ public class ValidateInput {
     public static boolean validateFirstName(String firstName) {
 
         return firstName.matches(
-                "[A-Z] [a-zA-Z]*");
+                "[A-Z][a-zA-Z]*");
     }
 
     // validate last name
@@ -18,9 +18,9 @@ public class ValidateInput {
     }
 
     // validate email address
-    public static boolean validateEmailAddress(String emailAddress) {
+    public static boolean validateAddress(String address) {
 
-        return emailAddress.matches(
+        return address.matches(
                 "\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
     }
 
