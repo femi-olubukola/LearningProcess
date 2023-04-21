@@ -7,7 +7,7 @@ public class ValidateInput {
     public static boolean validateFirstName(String firstName) {
 
         return firstName.matches(
-                "[A-Z] [a-zA-Z]*");
+                "[A-Z][a-zA-Z]*");
     }
 
     // validate last name
@@ -18,9 +18,9 @@ public class ValidateInput {
     }
 
     // validate email address
-    public static boolean validateEmailAddress(String emailAddress) {
+    public static boolean validateAddress(String address) {
 
-        return emailAddress.matches(
+        return address.matches(
                 "\\d+\\s+([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
     }
 
@@ -36,5 +36,19 @@ public class ValidateInput {
 
         return state.matches(
                 "([a-zA-Z]+|[a-zA-Z]+\\s[a-zA-Z]+)");
+    }
+
+    // validate zip
+    public static boolean validateZip(String zip) {
+
+        return zip.matches(
+                "\\d{5}");
+    }
+
+    // validate phone
+    public static boolean validatePhone(String phone) {
+
+        return phone.matches(
+                "[1-9]\\d{2}-[1-9]\\d{2}-\\d{4}");
     }
 }
