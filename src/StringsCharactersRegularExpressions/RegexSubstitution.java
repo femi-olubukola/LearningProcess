@@ -1,5 +1,7 @@
 package StringsCharactersRegularExpressions;
 
+import java.util.Arrays;
+
 // String methods replaceFirst, replaceAll and split.
 public class RegexSubstitution {
 
@@ -36,6 +38,6 @@ public class RegexSubstitution {
 
         System.out.print("String split at commas: ");
         String[] results = secondString.split(",\\s*"); // split on commas
-        System.out.println( );
+        System.out.println(Arrays.toString(results));
     }
 }
