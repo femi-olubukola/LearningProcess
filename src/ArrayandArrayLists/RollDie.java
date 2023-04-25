@@ -2,6 +2,7 @@ package ArrayandArrayLists;
 
 import java.security.SecureRandom;
 
+// Die-rolling program using arrays instead of switch.
 public class RollDie {
 
     public static void main(String[] args) {
