@@ -31,10 +31,15 @@ public class PassArray {
     }
 
     // multiply each element of an array by 2
-    public static void modifyArray(int[] array2)
-    {
+    public static void modifyArray(int[] array2) {
         for (int counter = 0; counter < array2.length; counter++)
             array2[counter] *= 2;
     }
 
+    // multiply argument by 2
+    public static void modifyElement(int element) {
+        element *= 2;
+        System.out.printf(
+                "Value of element in modifyElement: %d%n", element);
+    }
 }
