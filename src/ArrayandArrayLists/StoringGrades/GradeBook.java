@@ -21,4 +21,53 @@ public class GradeBook {
     public String getCourseName() {
         return courseName;
         }
+
+    // perform various operations on the data
+    public void processGrades() {
+
+        // output grades array
+        outputGrades();
+
+        // call method getAverage to calculate the average grade
+        System.out.printf("%nClass average is %.2f%n", getAverage());
+
+        // call methods getMinimum and getMaximum
+        System.out.printf("Lowest grade is %d%nHighest grade is %d%n%n",
+                getMinimum() , getMaximum() );
+
+        // call outputBarChart to print grade distribution chart
+        outputBarChart();
+    }
+
+    // find minimum grade
+    public int getMinimum() {
+
+        int lowGrade = grades[0]; // assume grades[0] is smallest
+
+        // loop through grades array
+        for (int grade : grades)
+        {
+            // if grade lower than lowGrade, assign it to lowGrade
+            if (grade < lowGrade)
+                lowGrade = grade; // new lowest grade
+        }
+
+        return lowGrade;
+    }
+
+    // find maximum grade
+    public int getMaximum() {
+
+        int highGrade = grades[0]; // assume grades[0] is smallest
+
+        // loop through grades array
+        for (int grade : grades)
+        {
+            // if grade lower than lowGrade, assign it to lowGrade
+            if (grade < highGrade)
+                highGrade = grade; // new lowest grade
+        }
+
+        return highGrade;
+    }
 }
