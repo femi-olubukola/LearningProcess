@@ -70,4 +70,67 @@ public class GradeBook {
 
         return highGrade;
     }
+
+    // determine average grade for test
+    public double getAverage() {
+
+        int total = 0;
+
+        // sum grades for one student
+        for (int grade : grades)
+            total += grade;
+
+        // return average of grades
+        return (double) total / grades.length;
+    }
+
+    // output bar chart displaying grade distribution
+    public void outputBarChart() {
+        System.out.println("Grade distribution:");
+
+        // stores frequency of grades in each range of 10 grades
+        int[] frequency = new int[11];
+
+        // for each grade, increment the appropriate frequency
+        for (int grade : grades)
+            ++frequency[grade / 10];
+
+        // for each grade frequency, print bar in chart
+        for (int count = 0; count < frequency.length; count++) {
+
+            // output bar label ("00-09: ", ..., "90-99: ", "100: ")
+            if (count == 10)
+                System.out.printf("%5d: ", 100);
+            else
+            System.out.printf("%02d-%02d: ",
+                    count * 10, count * 10 + 9);
+
+
+        }
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
