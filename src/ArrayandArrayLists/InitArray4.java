@@ -1,5 +1,6 @@
 package ArrayandArrayLists;
 
+// Initializing two-dimensional arrays.
 public class InitArray4 {
 
     public static void main(String[] args) {
