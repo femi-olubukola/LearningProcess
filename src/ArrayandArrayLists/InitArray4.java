@@ -22,7 +22,7 @@ public class InitArray4 {
         {
             // loop through columns of current row
             for (int column = 0; column < array[row].length; column++)
-                System.out.printf("%d ", array[row]);
+                System.out.printf("%d ", array[row][column]);
 
             System.out.println();
         }
