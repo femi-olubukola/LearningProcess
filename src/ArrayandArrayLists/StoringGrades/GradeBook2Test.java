@@ -7,7 +7,7 @@ public class GradeBook2Test {
     public static void main(String[] args) {
 
         // two-dimensional array of student grades
-        int[][] gradesArray = {{87, 96, 70},
+        int[][] gradesArray2 = {{87, 96, 70},
                 {68, 87, 90},
                 {94, 100, 90},
                 {100, 81, 82},
@@ -18,8 +18,8 @@ public class GradeBook2Test {
                 {76, 72, 84},
                 {87, 93, 73}};
 
-        GradeBook myGradeBook = new GradeBook(
-                "CS101 Introduction to Java Programming", gradesArray);
+        GradeBook2 myGradeBook = new GradeBook2(
+                "CS101 Introduction to Java Programming", gradesArray2);
         System.out.printf("Welcome to the grade book for%n%s%n%n",
                 myGradeBook.getCourseName());
         myGradeBook.processGrades();
