@@ -122,6 +122,31 @@ public class GradeBook2 {
         }
     }
 
+    // output the contents of the grades array
+    public void outputGrades() {
+        System.out.printf("The grades are:%n%n");
+        System.out.print(" "); // align column heads
 
+        // create a column heading for each of the tests
+        for (int test = 0; test < grades[0].length; test++)
+            System.out.printf("Test %d ", test + 1);
+
+        System.out.println("Average"); // student average column heading
+
+        // create rows/columns of text representing array grades
+        for (int student = 0; student < grades.length; student++) {
+            System.out.printf("Student %2d", student + 1);
+
+            for (int test : grades[student]) // output student's grades
+                System.out.printf("%8d", test);
+
+            // call method getAverage to calculate student's average grade;
+            // pass row of grades as the argument to getAverage
+            double average = getAverage(grades[student]);
+
+            System.out.printf("%9.2f%n", average);
+
+        }
+    }
 
 }
