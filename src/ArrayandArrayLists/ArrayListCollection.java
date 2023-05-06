@@ -51,5 +51,6 @@ public class ArrayListCollection {
         for (String item : items)
             System.out.printf(" %s", item);
 
+        System.out.println();
     }
 }
