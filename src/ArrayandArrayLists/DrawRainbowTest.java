@@ -1,6 +1,6 @@
 package ArrayandArrayLists;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
 // Test application to display a rainbow.
 public class DrawRainbowTest {
