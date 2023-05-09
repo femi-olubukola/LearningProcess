@@ -44,9 +44,5 @@ public class FileAndDirectoryInfo {
             }
         }
 
-        else { // not file or directory, output error message
-            System.out.printf("%s does not exist%n", path);
-        }
-
     }
 }
