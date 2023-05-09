@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 public class FileAndDirectoryInfo {
 
-    public static void main(String[] args)  {
+    public static void main(String[] args) throws IOException{
 
         Scanner input = new Scanner(System.in);
 
@@ -42,6 +42,10 @@ public class FileAndDirectoryInfo {
                 for (Path p : directoryStream)
                     System.out.println(p);
             }
+        }
+
+        else { // not file or directory, output error message
+            System.out.printf("%s does not exist%n", path);
         }
 
     }
