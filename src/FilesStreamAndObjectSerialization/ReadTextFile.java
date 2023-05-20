@@ -57,4 +57,10 @@ public class ReadTextFile {
         }
     } // end method readRecords
 
+    // close file and terminate application
+    public static void closeFile() {
+        if (input != null)
+            input.close();
+    }
+
 }
