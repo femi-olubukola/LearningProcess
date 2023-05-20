@@ -2,8 +2,6 @@ package FilesStreamAndObjectSerialization;
 
 import java.io.IOException;
 import java.lang.IllegalStateException;
-import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -56,5 +54,11 @@ public class ReadTextFile {
             System.err.println("Error reading from file. Terminating.");
         }
     } // end method readRecords
+
+    // close file and terminate application
+    public static void closeFile() {
+        if (input != null)
+            input.close();
+    }
 
 }
