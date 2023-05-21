@@ -95,5 +95,17 @@ public class CreditInquiry {
             }
     } // end method readRecords
 
+    // use record type to determine if record should be displayed
+    private static boolean shouldDisplay(MenuOption accountType, double balance) {
+        if ((accountType == MenuOption.CREDIT_BALANCE) && (balance < 0))
+            return true;
+        else if ((accountType == MenuOption.DEBIT_BALANCE) && (balance > 0))
+            return true;
+        else if ((accountType == MenuOption.ZERO_BALANCE) && (balance == 0))
+            return true;
+
+        return false;
+    }
+
 }
 
