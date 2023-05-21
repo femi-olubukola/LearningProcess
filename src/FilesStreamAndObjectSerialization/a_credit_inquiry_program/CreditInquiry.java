@@ -1,5 +1,15 @@
 package FilesStreamAndObjectSerialization.a_credit_inquiry_program;
 
+// This program reads a file sequentially and displays the
+// contents based on the type of account the user requests
+// (credit balance, debit balance or zero balance).
+
+import java.io.IOException;
+import java.lang.IllegalStateException;
+import java.nio.file.Paths;
+import java.util.NoSuchElementException;
+import java.util.Scanner;
+
 public class CreditInquiry {
 
     private final static MenuOption[] choices = MenuOption.values();

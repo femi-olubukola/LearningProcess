@@ -1,5 +1,7 @@
 package FilesStreamAndObjectSerialization.a_credit_inquiry_program;
 
+// enum type for the credit-inquiry program's options.
+
 public enum MenuOption {
 
     // declare contents of enum type
