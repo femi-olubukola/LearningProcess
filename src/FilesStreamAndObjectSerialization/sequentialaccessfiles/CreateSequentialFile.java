@@ -17,7 +17,7 @@ public class CreateSequentialFile {
 
         openFile();
         addRecords();
-//        closeFile();
+        closeFile();
     }
 
     // open file clients.ser
@@ -67,4 +67,18 @@ public class CreateSequentialFile {
                 System.out.print("? ");
             }
     }
+
+    // close file and terminate application
+    public static void closeFile() {
+        try
+        {
+            if (output != null)
+                output.close();
+        }
+        catch (IOException ioException)
+        {
+            System.err.println("Error closing file. Terminating.");
+        }
+    }
+
 }
