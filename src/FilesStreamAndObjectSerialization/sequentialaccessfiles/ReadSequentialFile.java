@@ -16,6 +16,7 @@ public class ReadSequentialFile {
     public static void main(String[] args) {
 
         openFile();
+        readRecords();
         closeFile();
     }
 
@@ -31,7 +32,36 @@ public class ReadSequentialFile {
         }
     }
 
+    // read record from file
+    public static void readRecords() {
+        System.out.printf("%-10s%-12s%-12s%10s%n", "Account",
+                "First Name", "Last Name", "Balance");
 
+        try
+        {
+            while (true) // loop until there is an EOFException
+                {
+                    Account record = (Account) input.readObject();
+
+                // display record contents
+                System.out.printf("%-10d%-12s%-12s%10.2f%n",
+                        record.getAccount(), record.getFirstName(),
+                        record.getLastName(), record.getBalance());
+                }
+        }
+        catch (EOFException endOfFileException)
+        {
+            System.out.printf("%No more records%n");
+        }
+        catch (ClassNotFoundException classNotFoundException)
+        {
+            System.err.println("Invalid object type. Terminating.");
+        }
+        catch (IOException ioException)
+        {
+            System.err.println("Error reading from file. Terminating.");
+        }
+    }
 
     // close file and terminate application
     public static void closeFile() {
