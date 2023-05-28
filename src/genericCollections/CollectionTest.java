@@ -4,6 +4,10 @@ package genericCollections;
 
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Iterator;
+
+
 public class CollectionTest {
 
     public static void main(String[] args) {
@@ -29,12 +33,24 @@ public class CollectionTest {
             System.out.printf("%s ", list.get(count));
 
         // remove from list the colors contained in removeList
-//        removeColors(list, removeList);
+        removeColors(list, removeList);
 
         // output list contents
         System.out.printf("%n%nArrayList after calling removeColors:%n");
 
         for (String color : list)
             System.out.printf("%s ", color);
+    }
+
+    // remove colors specified in collection2 from collection1
+    private static void removeColors(Collection<String> collection1, Collection<String> collection2) {
+        // get iterator
+        Iterator<String> iterator = collection1.iterator();
+
+        // loop while collection has items
+        while (iterator.hasNext()) {
+            if (collection2.contains(iterator.next()))
+                iterator.remove(); // remove current element
+        }
     }
 }
