@@ -59,4 +59,19 @@ public class ListTest {
         }
     }
 
+    // obtain sublist and use clear method to delete sublist items
+    private static void removeItems(List<String> list , int start, int end) {
+        list.subList(start, end).clear(); // remove items
+    }
+
+    // print reversed list
+    private static void printReversedList(List<String> list) {
+        ListIterator<String> iterator = list.listIterator(list.size());
+        System.out.printf("%nReversed List:%n");
+
+        // print list in reverse order
+        while (iterator.hasPrevious())
+            System.out.printf("%s ", iterator.previous());
+    }
+
 }
