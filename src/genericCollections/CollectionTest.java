@@ -14,14 +14,14 @@ public class CollectionTest {
 
         // add elements in colors array to list
         String[] colors = {"MAGENTA", "RED", "WHITE", "BLUE", "CYAN"};
-        List<String> list = new ArrayList<String>();
+        List<String> list = new ArrayList<>();
 
         for (String color : colors)
             list.add(color); // adds color to end of list
 
         // add elements in removeColors array to removeList
         String[] removeColors = {"RED", "WHITE", "BLUE"};
-        List<String> removeList = new ArrayList<String>();
+        List<String> removeList = new ArrayList<>();
 
         for (String color : removeColors)
             removeList.add(color);
