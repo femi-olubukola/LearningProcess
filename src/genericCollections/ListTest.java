@@ -4,7 +4,7 @@ package genericCollections;
 
 import java.util.List;
 import java.util.LinkedList;
-//import java.util.ListIterator;
+import java.util.ListIterator;
 
 public class ListTest {
 
@@ -38,4 +38,25 @@ public class ListTest {
         printList(list1); // print list1 elements
         printReversedList(list1); // print list in reverse order
     }
+
+    // output List contents
+    private static void printList(List<String> list) {
+        System.out.printf("%nlist:%n");
+
+        for (String color : list)
+            System.out.printf("%s ", color);
+
+        System.out.println();
+    }
+
+    // locate String objects and convert to uppercase
+    private static void convertToUppercaseStrings(List<String> list) {
+        ListIterator<String> iterator = list.listIterator();
+
+        while (iterator.hasNext()) {
+            String color = iterator.next(); // get item
+            iterator.set(color.toUpperCase()); // convert to upper case
+        }
+    }
+
 }
