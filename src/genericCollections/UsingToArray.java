@@ -19,7 +19,7 @@ public class UsingToArray {
         // get LinkedList elements as an array
         colors = links.toArray(new String[links.size()]);
 
-
+        System.out.println("colors: ");
 
         for (String color : colors)
             System.out.println(color);
