@@ -13,7 +13,7 @@ public class Sort2 {
         String[] suits = {"Hearts", "Diamonds", "Clubs", "Spades"};
 
         // Create and display a list containing the suits array elements
-        List<String> list = Arrays.asList(suits);
+        List<String> list = Arrays.asList(suits); // create List
         System.out.printf("Unsorted array elements: %s%n", list);
 
         Collections.sort(list, Collections.reverseOrder()); // sort ArrayList
