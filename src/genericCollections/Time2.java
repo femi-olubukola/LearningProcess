@@ -15,7 +15,7 @@ public class Time2 {
     }
 
     // Time2 constructor: hour supplied, minute and second defaulted to 0
-    public Time2(int hour, int minute) {
+    public Time2(int hour) {
         this(hour, 0, 0); // invoke constructor with three arguments
     }
 
