@@ -103,4 +103,17 @@ public class Time2 {
         return second;
     }
 
+    // convert to String in universal-time format (HH:MM:SS)
+    public String toUniversalString() {
+        return String.format(
+                "%02d:%02d:%02d", getHour(), getMinute(), getSecond());
+    }
+
+    // convert to String in standard-time format (H:MM:SS AM or PM)
+    public String toString() {
+        return String.format("%d:%02d:%02d %s",
+                ((getHour() == 0 || getHour() == 12) ? 12 : getHour() % 12),
+                getMinute(), getSecond(), (getHour() < 12 ? "AM" : "PM"));
+    }
+
 }
