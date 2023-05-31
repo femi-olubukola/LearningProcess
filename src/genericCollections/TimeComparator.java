@@ -1,5 +1,7 @@
 package genericCollections;
 
+// Custom Comparator class that compares two Time2 objects.
+
 import java.util.Comparator;
 
 public class TimeComparator implements Comparator<Time2> {
