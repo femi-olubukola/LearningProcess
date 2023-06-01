@@ -7,11 +7,11 @@ import java.util.Comparator;
 public class TimeComparator implements Comparator<Time2> {
 
     @Override
-    public int compare(Time2 time1 Time2 time2) {
+    public int compare(Time2 time1, Time2 time2) {
         int hourDifference = time1.getHour() - time2.getHour();
 
         if (hourDifference != 0) // test the hour first
-            return hourCompare;
+            return hourDifference;
 
         int minuteDifference = time1.getMinute() - time2.getMinute();
 
