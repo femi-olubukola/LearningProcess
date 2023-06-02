@@ -59,4 +59,17 @@ public class DeckOfCards {
 
     } // end DeckOfCards constructor
 
-}
+    // output deck
+    public void printCards() {
+        // display 52 cards in two columns
+        for (int i = 0; i < list.size(); i++)
+            System.out.printf("%-19s%s", list.get(i),
+                ((i + 1) % 4 == 0) ? "%n" : "");
+    }
+
+        public static void main(String[] args) {
+            DeckOfCards cards = new DeckOfCards();
+            cards.printCards();
+        }
+
+} // end class DeckOfCards
