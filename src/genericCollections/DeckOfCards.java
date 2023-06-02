@@ -39,11 +39,10 @@ class Card {
 
 // class DeckOfCards declaration
 public class DeckOfCards {
-        private List<Card> list; // declare List that will store Cards
+    private List<Card> list; // declare List that will store Cards
 
-        // set up deck of Cards and shuffle
-        public DeckOfCards()
-        {
+    // set up deck of Cards and shuffle
+    public DeckOfCards() {
         Card[] deck = new Card[52];
         int count = 0; // number of cards
 
@@ -55,4 +54,9 @@ public class DeckOfCards {
             }
         }
 
-} // end DeckOfCards constructor
+        list = Arrays.asList(deck); // get List
+        Collections.shuffle(list); // shuffle deck
+
+    } // end DeckOfCards constructor
+
+}
