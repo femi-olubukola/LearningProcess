@@ -39,6 +39,12 @@ public class Algorithms1 {
     // output List information
     private static void output(List<Character> listRef) {
 
+        System.out.print("The list is: ");
 
+        for (Character element : listRef)
+            System.out.printf("%s ", element);
+
+        System.out.printf("%nMax: %s", Collections.max(listRef));
+        System.out.printf(" Min: %s%n", Collections.min(listRef));
     }
 }
