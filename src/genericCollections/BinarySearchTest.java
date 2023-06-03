@@ -16,6 +16,7 @@ public class BinarySearchTest {
                 "purple", "tan", "pink"};
         List<String> list = new ArrayList<>(Arrays.asList(colors));
 
+        Collections.sort(list); // sort the ArrayList
         System.out.printf("Sorted ArrayList: %s%n", list);
 
         // search list for various values
@@ -33,7 +34,7 @@ public class BinarySearchTest {
         int result = 0;
 
         System.out.printf("%nSearching for: %s%n", key);
-
+        result = Collections.binarySearch(list, key);
 
         if (result >= 0)
             System.out.printf("Found at index %d%n", result);
