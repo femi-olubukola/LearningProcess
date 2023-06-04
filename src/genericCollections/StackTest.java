@@ -1,6 +1,9 @@
 package genericCollections;
 
+// Stack class of package java.util.
+
 import java.util.Stack;
+import java.util.EmptyStackException;
 
 public class StackTest {
 
@@ -31,7 +34,7 @@ public class StackTest {
 
             // pop elements from stack
             while (true) {
-
+                removedObject = stack.pop(); // use pop method
                 System.out.printf("Popped %s%n", removedObject);
                 printStack(stack);
             }
@@ -42,5 +45,12 @@ public class StackTest {
 
     }
 
+    // display Stack contents
+    private static void printStack(Stack<Number> stack) {
+        if (stack.isEmpty())
+            System.out.printf("stack is empty%n%n"); // the stack is empty
 
+        else // stack is not empty
+        System.out.printf("stack contains: %s (top)%n", stack);
+    }
 }
