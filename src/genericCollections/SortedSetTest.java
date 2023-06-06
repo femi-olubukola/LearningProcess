@@ -34,10 +34,11 @@ public class SortedSetTest {
 
     // output SortedSet using enhanced for statement
     private static void printSet(SortedSet<String> set) {
+
         for (String s : set)
             System.out.printf("%s ", s);
 
-        System.out.println();
+
         System.out.println();
 
     }
