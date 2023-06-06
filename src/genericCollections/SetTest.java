@@ -33,6 +33,6 @@ public class SetTest {
         for (String value : set)
             System.out.printf("%s ", value);
 
-
+        System.out.println();
     }
 }
