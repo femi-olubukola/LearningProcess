@@ -18,5 +18,29 @@ public class WordTypeCount {
         displayMap(myMap); // display map content
     }
 
+    // create map from user input
+    private static void createMap(Map<String, Integer> map) {
+        Scanner scanner = new Scanner(System.in); // create scanner
+        System.out.println("Enter a string:"); // prompt for user input
+        String input = scanner.nextLine();
+
+        // tokenize the input
+        String[] tokens = input.split(" ");
+
+        // processing input text
+        for (String token : tokens) {
+            String word = token.toLowerCase(); // get lowercase word
+
+            // if the map contains the word
+            if (map.containsKey(word)) // is word in map
+                {
+                    int count = map.get(word); // get current count
+                    map.put(word, count + 1); // increment count
+                }
+            else
+                map.put(word, 1); // add new word with a count of 1 to map
+
+        }
+    }
 
 }
