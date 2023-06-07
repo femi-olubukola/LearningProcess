@@ -43,4 +43,22 @@ public class WordTypeCount {
         }
     }
 
+    // display map content
+    private static void displayMap(Map<String, Integer> map) {
+
+        Set<String> keys = map.keySet(); // get keys
+
+        // sort keys
+        TreeSet<String> sortedKeys = new TreeSet<>(keys);
+
+        System.out.printf("%nMap contains:%nKey\t\tValue%n");
+
+        // generate output for each key in map
+        for (String key : sortedKeys)
+            System.out.printf("%-10s%10s%n", key);
+
+        System.out.printf(
+                "%nsize: %d%nisEmpty: %b%n", , );
+    }
+
 }
