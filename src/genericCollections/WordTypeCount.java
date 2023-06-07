@@ -55,10 +55,10 @@ public class WordTypeCount {
 
         // generate output for each key in map
         for (String key : sortedKeys)
-            System.out.printf("%-10s%10s%n", key);
+            System.out.printf("%-10s%10s%n", key, map.get(key));
 
         System.out.printf(
-                "%nsize: %d%nisEmpty: %b%n", , );
+                "%nsize: %d%nisEmpty: %b%n", map.size(), map.isEmpty() );
     }
 
 }
