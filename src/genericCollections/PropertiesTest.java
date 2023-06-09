@@ -19,17 +19,19 @@ public class PropertiesTest {
         table.setProperty("width", "200");
 
         System.out.println("After setting properties");
+        listProperties(table);
 
         System.out.println("After replacing properties");
+        listProperties(table);
 
         saveProperties(table);
 
         table.clear(); // empty table
 
         System.out.println("After clearing properties");
+        listProperties(table);
 
-
-
+        loadProperties(table);
 
         // get value of property color
         Object value = table.getProperty("color");
@@ -51,7 +53,7 @@ public class PropertiesTest {
             props.store(output, "Sample Properties"); // save properties
             output.close();
             System.out.println("After saving properties");
-
+            listProperties(props);
         }
         catch (IOException ioException) {
             ioException.printStackTrace();
