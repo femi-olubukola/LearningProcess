@@ -59,4 +59,22 @@ public class PropertiesTest {
             ioException.printStackTrace();
         }
     }
+
+    // load properties from a file
+    private static void loadProperties(Properties props) {
+
+        // load contents of table
+        try {
+            FileInputStream input = new FileInputStream("props.dat");
+            props.load(input); // load properties
+            input.close();
+
+            System.out.println("After loading properties");
+            listProperties(props);
+        }
+        catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
+    }
+
 }
