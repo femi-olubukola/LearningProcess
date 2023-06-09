@@ -77,4 +77,16 @@ public class PropertiesTest {
         }
     }
 
+    // output property values
+    private static void listProperties(Properties props) {
+
+        Set<Object> keys = props.keySet(); // get property names
+
+        // output name/value pairs
+        for (Object key : keys)
+            System.out.printf(
+                "%s\t%s%n", key, props.getProperty((String) key));
+
+        System.out.println();
+    }
 }
