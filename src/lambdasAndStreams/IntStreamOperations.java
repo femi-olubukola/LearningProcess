@@ -52,7 +52,24 @@ public class IntStreamOperations {
         System.out.println();
 
 
+        // odd values multiplied by 10 and displayed in sorted order
+        System.out.printf(
+                "Odd values multiplied by 10 displayed in sorted order: ");
+        IntStream.of(values)
+                .filter(value -> value % 2 != 0)
+                .map(value -> value * 10)
+                .sorted()
+                .forEach(value -> System.out.printf("%d ", value));
+        System.out.println();
 
+
+        // sum range of integers from 1 to 10, exlusive
+        System.out.printf("%nSum of integers from 1 to 9: %d%n",
+                IntStream.range(1, 10).sum());
+
+        // sum range of integers from 1 to 10, inclusive
+        System.out.printf("Sum of integers from 1 to 10: %d%n",
+                IntStream.rangeClosed(1, 10).sum());
 
     }
 }
