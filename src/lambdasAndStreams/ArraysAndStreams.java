@@ -39,5 +39,12 @@ public class ArraysAndStreams {
                         .sorted()
                         .collect(Collectors.toList()));
 
+
+        // greaterThan4 List sorted with streams
+        System.out.printf(
+                "Values greater than 4 (ascending with streams): %s%n",
+                greaterThan4.stream()
+                        .sorted()
+                        .collect(Collectors.toList()));
     }
 }
