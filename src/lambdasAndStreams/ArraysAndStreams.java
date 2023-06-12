@@ -16,11 +16,13 @@ public class ArraysAndStreams {
         // display original values
         System.out.printf("Original values: %s%n", Arrays.asList(values));
 
+
         // sort values in ascending order with streams
         System.out.printf("Sorted values: %s%n",
                 Arrays.stream(values)
                         .sorted()
                         .collect(Collectors.toList()));
+
 
         // values greater than 4
         List<Integer> greaterThan4 =
@@ -28,5 +30,14 @@ public class ArraysAndStreams {
                         .filter(value -> value > 4)
                         .collect(Collectors.toList());
         System.out.printf("Values greater than 4: %s%n", greaterThan4);
+
+
+        // filter values greater than 4 then sort the results
+        System.out.printf("Sorted values greater than 4: %s%n",
+                Arrays.stream(values)
+                        .filter(value -> value > 4)
+                        .sorted()
+                        .collect(Collectors.toList()));
+
     }
 }
