@@ -54,5 +54,15 @@ public class Employee {
         return department;
     }
 
+    // return Employee's first and last name combined
+    public String getName() {
+        return String.format("%s %s", getFirstName(), getLastName());
+    }
 
+    // return a String containing the Employee's information
+    @Override
+    public String toString() {
+        return String.format("%-8s %-8s %8.2f %s",
+                getFirstName(), getLastName(), getSalary(), getDepartment());
+    } // end method toString
 }
