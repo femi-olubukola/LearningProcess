@@ -26,6 +26,6 @@ public class ProcessingEmployees {
         // display all Employees
         System.out.println("Complete Employee list:");
 
-
+        list.stream().forEach(System.out::println);
     }
 }
