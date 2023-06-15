@@ -47,6 +47,11 @@ public class ProcessingEmployees {
                 .sorted(Comparator.comparing(Employee::getSalary))
                 .forEach(System.out::println);
 
-
+        // Display first Employee with salary in the range $4000-$6000
+        System.out.printf("%nFirst employee who earns $4000-$6000:%n%s%n",
+                list.stream()
+                .filter(fourToSixThousand)
+                        .findFirst()
+                        .get());
     }
 }
