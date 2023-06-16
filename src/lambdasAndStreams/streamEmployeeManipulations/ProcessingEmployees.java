@@ -29,14 +29,17 @@ public class ProcessingEmployees {
         // get List view of the Employees
         List<Employee> list = Arrays.asList(employees);
 
+
         // display all Employees
         System.out.println("Complete Employee list:");
 
         list.stream().forEach(System.out::println);
 
+
         // Predicate that returns true for salaries in the range $4000-$6000
         Predicate<Employee> fourToSixThousand =
                 e -> (e.getSalary() >= 4000 && e.getSalary() <= 6000);
+
 
         // Display Employees with salaries in the range $4000-$6000
         // sorted into ascending order by salary
@@ -47,11 +50,37 @@ public class ProcessingEmployees {
                 .sorted(Comparator.comparing(Employee::getSalary))
                 .forEach(System.out::println);
 
+
         // Display first Employee with salary in the range $4000-$6000
         System.out.printf("%nFirst employee who earns $4000-$6000:%n%s%n",
                 list.stream()
                 .filter(fourToSixThousand)
                         .findFirst()
                         .get());
+
+
+        // Functions for getting first and last names from an Employee
+        Function<Employee, String> byFirstName = Employee::getFirstName;
+        Function<Employee, String> byLastName = Employee::getLastName;
+
+        // Comparator for comparing Employees by first name then last name
+        Comparator<Employee> lastThenFirst =
+                Comparator.comparing(byLastName).thenComparing(byFirstName);
+
+
+        // sort employees by last name, then first name
+        System.out.printf(
+                "%nEmployees in ascending order by last name then first:%n");
+        list.stream()
+                .sorted(lastThenFirst)
+                .forEach(System.out::println);
+
+        // sort employees in descending order by last name, then first name
+        System.out.printf(
+                "%nEmployees in descending order by last name then first:%n");
+        list.stream()
+                .sorted(lastThenFirst.reversed())
+                .forEach(System.out::println);
+
     }
 }
