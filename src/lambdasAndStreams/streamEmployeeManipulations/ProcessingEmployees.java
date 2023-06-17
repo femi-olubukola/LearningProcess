@@ -144,6 +144,6 @@ public class ProcessingEmployees {
                         .reduce(0, (value1, value2) -> value1 + value2));
 
 
-        
+
     }
 }
