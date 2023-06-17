@@ -99,5 +99,24 @@ public class ProcessingEmployees {
                 .sorted(lastThenFirst)
                 .map(Employee::getName)
                 .forEach(System.out::println);
+
+
+        // group Employees by department
+        System.out.printf("%nEmployees by department:%n");
+        Map<String, List<Employee>> groupedByDepartment =
+                list.stream()
+                        .collect(Collectors.groupingBy(Employee::getDepartment));
+
+        groupedByDepartment.forEach(
+                (department, employeesInDepartment) ->
+                {
+                    System.out.println(department);
+                    employeesInDepartment.forEach(
+                            employee -> System.out.printf(" %s%n", employee));
+                }
+                );
+
+
+
     }
 }
