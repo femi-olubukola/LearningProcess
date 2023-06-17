@@ -144,6 +144,11 @@ public class ProcessingEmployees {
                         .reduce(0, (value1, value2) -> value1 + value2));
 
 
-
+        // average of Employee salaries with DoubleStream average method
+        System.out.printf("Average of Employees' salaries: %.2f%n",
+                list.stream()
+                .mapToDouble(Employee::getSalary)
+                        .average()
+                        .getAsDouble());
     }
 }
