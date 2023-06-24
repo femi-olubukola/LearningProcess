@@ -12,4 +12,11 @@ public class FactorialCalculator {
             return number * factorial(number - 1);
     }
 
+    // output factorials for values 0-21
+    public static void main(String[] args) {
+        // calculate the factorials of 0 through 21
+        for (int counter = 0; counter <= 21; counter++)
+            System.out.printf("%d! = %d%n", counter, factorial(counter));
+    }
+
 }
