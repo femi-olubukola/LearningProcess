@@ -1,5 +1,7 @@
 package recursion;
 
+// Recursive factorial method.
+
 public class FactorialCalculator {
 
     // recursive method factorial (assumes its parameter is >= 0)
