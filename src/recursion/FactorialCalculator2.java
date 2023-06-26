@@ -14,5 +14,12 @@ public class FactorialCalculator2 {
                     factorial(number.subtract(BigInteger.ONE)));
     }
 
+    // output factorials for values 0-50
+    public static void main(String[] args) {
 
+        // calculate the factorials of 0 through 50
+        for (int counter = 0; counter <= 50; counter++)
+            System.out.printf("%d! = %d%n", counter,
+                factorial(BigInteger.valueOf(counter)));
+    }
 }
