@@ -5,7 +5,7 @@ package recursion;
 public class FactorialCalculator3 {
 
     // recursive declaration of method factorial
-    public long factorial(long number) {
+    public static long factorial(long number) {
         long result = 1;
 
         // iterative declaration of method factorial
