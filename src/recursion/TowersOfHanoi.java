@@ -1,5 +1,7 @@
 package recursion;
 
+// Towers of Hanoi solution with a recursive method.
+
 public class TowersOfHanoi {
 
     // recursively move disks between towers
