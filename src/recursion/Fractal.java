@@ -58,5 +58,8 @@ public class Fractal {
 
     } // end Fractal constructor
 
-
+    public static void main(String[] args) {
+        Fractal demo = new Fractal();
+        demo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
 }
