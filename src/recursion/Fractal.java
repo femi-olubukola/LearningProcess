@@ -54,6 +54,28 @@ public class Fractal {
         } // end anonymous inner class
         ); // end addActionListener
 
+        // set up decrease level button to add to control panel and register listener
+        final JButton decreaseLevelJButton = new JButton("Decrease Level");
+        controlJPanel.add(decreaseLevelJButton);
+        decreaseLevelJButton.addActionListener(
+                new ActionListener() // anonymous inner class
+        {
+            // process decreaseLevelJButton event
+            @Override
+            public void actionPerformed(ActionEvent event) {
+                int level = drawSpace.getLevel();
+                --level;
+
+                // modify level if possible
+                if ((level >= MIN_LEVEL)) && (level <= MAX_LEVEL)) {
+                    levelJLabel.setText("Level: " + level);
+                    drawSpace.setLevel(level);
+                    repaint();
+                }
+            }
+        } // end anonymous inner class
+        ); // end addActionListener
+
 
 
     } // end Fractal constructor
