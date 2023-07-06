@@ -47,6 +47,29 @@ public class FractalJPanel  extends JPanel{
         }
     }
 
+    // start drawing the fractal
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponent(g);
 
+        // draw fractal pattern
+        g.setColor(color);
+        drawFractal(level, 100, 90, 290, 200, g);
+    }
+
+    // set the drawing color to c
+    public void setColor(Color c) {
+        color = c;
+    }
+
+    // set the new level of recursion
+    public void setLevel(int currentLevel) {
+        level = currentLevel;
+    }
+
+    // returns level of recursion
+    public int getLevel() {
+        return level;
+    }
 
 }
