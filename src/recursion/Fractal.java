@@ -2,8 +2,7 @@ package recursion;
 
 // Fractal user interface.
 
-import java.awt.Color;
-import java.awt.FlowLayout;
+import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JFrame;
@@ -12,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JColorChooser;
 
-public class Fractal {
+public class Fractal extends Component {
 
     private static final int WIDTH = 400; // define width of GUI
     private static final int HEIGHT = 480; // define height of GUI
@@ -22,7 +21,7 @@ public class Fractal {
     // set up GUI
     public Fractal(){
 
-        super("Fractal");
+        super();
 
         // set up levelJLabel to add to controlJPanel
         final JLabel levelJLabel = new JLabel("Level: 0");
@@ -67,7 +66,7 @@ public class Fractal {
                 --level;
 
                 // modify level if possible
-                if ((level >= MIN_LEVEL)) && (level <= MAX_LEVEL)) {
+                if ((level >= MIN_LEVEL) && (level <= MAX_LEVEL)) {
                     levelJLabel.setText("Level: " + level);
                     drawSpace.setLevel(level);
                     repaint();
@@ -90,7 +89,7 @@ public class Fractal {
                 ++level;
 
                 // modify level if possible
-                if ((level >= MIN_LEVEL)) && (level <= MAX_LEVEL)) {
+                if ((level >= MIN_LEVEL) && (level <= MAX_LEVEL)) {
                     levelJLabel.setText("Level: " + level);
                     drawSpace.setLevel(level);
                     repaint();
@@ -113,8 +112,14 @@ public class Fractal {
 
     } // end Fractal constructor
 
+    private void add(JPanel mainJPanel) {
+    }
+
     public static void main(String[] args) {
         Fractal demo = new Fractal();
         demo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+    }
+
+    private void setDefaultCloseOperation(int exitOnClose) {
     }
 }
