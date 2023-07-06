@@ -11,7 +11,7 @@ import javax.swing.JLabel;
 import javax.swing.JPanel;
 import javax.swing.JColorChooser;
 
-public class Fractal extends Component {
+public class Fractal extends JFrame {
 
     private static final int WIDTH = 400; // define width of GUI
     private static final int HEIGHT = 480; // define height of GUI
@@ -112,14 +112,9 @@ public class Fractal extends Component {
 
     } // end Fractal constructor
 
-    private void add(JPanel mainJPanel) {
-    }
-
     public static void main(String[] args) {
         Fractal demo = new Fractal();
         demo.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     }
 
-    private void setDefaultCloseOperation(int exitOnClose) {
-    }
 }
