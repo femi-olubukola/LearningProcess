@@ -23,6 +23,29 @@ public class FractalJPanel  extends JPanel{
         setPreferredSize(new Dimension(WIDTH, HEIGHT));
     }
 
+    // draw fractal recursively
+    public void drawFractal(int level, int xA, int yA, int xB, int yB, Graphics g) {
+        // base case: draw a line connecting two given points
+        if (level == 0)
+            g.drawLine(xA, yA, xB, yB);
+        else // recursion step: determine new points, draw next level
+        {
+            // calculate midpoint between (xA, yA) and (xB, yB)
+            int xC = (xA + xB) / 2;
+            int yC = (yA + yB) / 2;
+
+            // calculate the fourth point (xD, yD) which forms an
+            // isosceles right triangle between (xA, yA) and (xC, yC)
+            // where the right angle is at (xD, yD)
+            int xD = xA + (xC - xA) / 2 - (yC - yA) / 2;
+            int yD = yA + (yC - yA) / 2 + (xC - xA) / 2;
+
+            // recursively draw the Fractal
+            drawFractal(level - 1, xD, yD, xA, yA, g);
+            drawFractal(level - 1, xD, yD, xC, yC, g);
+            drawFractal(level - 1, xD, yD, xB, yB, g);
+        }
+    }
 
 
 
