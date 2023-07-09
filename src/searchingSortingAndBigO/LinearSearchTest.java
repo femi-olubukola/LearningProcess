@@ -34,6 +34,19 @@ public class LinearSearchTest {
         System.out.print("Please enter an integer value (-1 to quit): ");
         int searchInt = input.nextInt();
 
+        // repeatedly input an integer; -1 terminates the program
+        while (searchInt != -1) {
+            int position = linearSearch(data, searchInt); // perform search
 
+            if (position == -1) // not found
+                System.out.printf("%d was not found%n%n", searchInt);
+            else // found
+            System.out.printf("%d was found in position %d%n%n",
+                    searchInt, position);
+
+            // get input from user
+            System.out.print("Please enter an integer value (-1 to quit): ");
+            searchInt = input.nextInt();
+        }
     } // end main
 }
