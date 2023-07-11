@@ -39,5 +39,20 @@ public class BinarySearchTest {
 
     }  // end method binarySearch
 
+    // method to output certain values in array
+    private static String remainingElements(int[] data, int low, int high) {
+        StringBuilder temporary = new StringBuilder();
+
+        // append spaces for alignment
+        for (int i = 0; i < low; i++)
+            temporary.append(" ");
+
+        // append elements left in array
+        for (int i = low; i <= high; i++)
+            temporary.append(data[i] + " ");
+
+        return String.format("%s%n", temporary);
+    } // end method remainingElements
+
 
 }
