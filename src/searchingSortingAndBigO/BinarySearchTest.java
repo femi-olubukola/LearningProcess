@@ -54,5 +54,38 @@ public class BinarySearchTest {
         return String.format("%s%n", temporary);
     } // end method remainingElements
 
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        SecureRandom generator = new SecureRandom();
 
+        int[] data = new int[15]; // create array
+
+        for (int i = 0; i < data.length; i++) // populate array
+            data[i] = 10 + generator.nextInt(90);
+
+        Arrays.sort(data); // binarySearch requires sorted array
+        System.out.printf("%s%n%n", Arrays.toString(data)); // display array
+
+
+        // get input from user
+        System.out.print("Please enter an integer value (-1 to quit): ");
+        int searchInt = input.nextInt();
+
+        // repeatedly input an integer; -1 terminates the program
+        while (searchInt != -1) {
+            // perform search
+            int location = binarySearch(data, searchInt);
+
+            if (location == -1) // not found
+                System.out.printf("%d was not found%n%n", searchInt);
+            else // found
+            System.out.printf("%d was found in position %d%n%n",
+                    searchInt, location);
+
+            // get input from user
+            System.out.print("Please enter an integer value (-1 to quit): ");
+            searchInt = input.nextInt();
+        }
+
+    } // end main
 }
