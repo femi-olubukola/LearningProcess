@@ -18,4 +18,14 @@ public class SelectionSortTest {
             printPass(i + 1, smallest); // output pass of algorithm
         }
     } // end method selectionSort
+
+    // helper method to swap values in two elements
+    private static void swap(int[] data, int first, int second){
+        int temporary = data[first]; // store first in temporary
+        data[first] = data[second]; // replace first with second
+        data[second] = temporary; // put temporary in second
+    }
+
+    // print a pass of the algorithm
+    private static void printPass(int[] data, int pass, int index){}
 }
