@@ -27,5 +27,26 @@ public class SelectionSortTest {
     }
 
     // print a pass of the algorithm
-    private static void printPass(int[] data, int pass, int index){}
+    private static void printPass(int[] data, int pass, int index){
+
+        System.out.printf("after pass %2d: ", pass);
+
+        // output elements till selected item
+        for (int i = 0; i < index; i++)
+            System.out.printf("%d ", data[i]);
+
+        System.out.printf("%d* ", data[index]); // indicate swap
+
+        // finish outputting array
+        for (int i = index + 1; i < data.length; i++)
+            System.out.printf("%d ", data[i]);
+
+        System.out.printf("%n "); // for alignment
+
+        // indicate amount of array that’s sorted
+        for (int j = 0; j < pass; j++)
+            System.out.print("-- ");
+
+        System.out.println();
+    }
 }
