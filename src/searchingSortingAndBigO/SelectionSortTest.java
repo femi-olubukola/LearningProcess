@@ -1,5 +1,10 @@
 package searchingSortingAndBigO;
 
+// Sorting an array with selection sort.
+
+import java.security.SecureRandom;
+import java.util.Arrays;
+
 public class SelectionSortTest {
 
     // sort array using selection sort
@@ -48,5 +53,21 @@ public class SelectionSortTest {
             System.out.print("-- ");
 
         System.out.println();
+    }
+
+    public static void main(String[] args) {
+        SecureRandom generator = new SecureRandom();
+
+        int[] data = new int[10]; // create array
+
+        for (int i = 0; i < data.length; i++) // populate array
+            data[i] = 10 + generator.nextInt(90);
+
+        System.out.printf("Unsorted array:%n%s%n%n",
+                Arrays.toString(data)); // display array
+
+
+        System.out.printf("Sorted array:%n%s%n%n",
+                Arrays.toString(data)); // display array
     }
 }
