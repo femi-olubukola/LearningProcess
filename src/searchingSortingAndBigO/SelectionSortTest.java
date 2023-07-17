@@ -20,7 +20,7 @@ public class SelectionSortTest {
                 smallest = index;
 
             swap(data, i, smallest); // swap smallest element into position
-            printPass(i + 1, smallest); // output pass of algorithm
+            printPass(data,i + 1, smallest); // output pass of algorithm
         }
     } // end method selectionSort
 
