@@ -23,4 +23,22 @@ public class InsertionSortTest {
             printPass(data, next, moveItem); // output pass of algorithm
         }
     }
+
+    // print a pass of the algorithm
+    public static void printPass(int[] data, int pass, int index) {
+        System.out.printf("after pass %2d: ", pass);
+
+        // output elements till swapped item
+        for (int i = 0; i < index; i++)
+            System.out.printf("%d ", data[i]);
+        System.out.printf("%d* ", data[index]); // indicate swap
+
+        // finish outputting array
+        for (int i = index + 1; i < data.length; i++)
+            System.out.printf("%d ", data[i]);
+
+        System.out.printf("%n "); // for alignment
+
+
+    }
 }
