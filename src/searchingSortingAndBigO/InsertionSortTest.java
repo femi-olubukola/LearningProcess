@@ -39,6 +39,9 @@ public class InsertionSortTest {
 
         System.out.printf("%n "); // for alignment
 
-
+        // indicate amount of array that’s sorted
+        for(int i = 0; i <= pass; i++)
+            System.out.print("-- ");
+        System.out.println();
     }
 }
