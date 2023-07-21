@@ -2,6 +2,9 @@ package searchingSortingAndBigO;
 
 // Sorting an array with insertion sort.
 
+import java.security.SecureRandom;
+import java.util.Arrays;
+
 public class InsertionSortTest {
 
     // sort array using insertion sort
@@ -44,4 +47,21 @@ public class InsertionSortTest {
             System.out.print("-- ");
         System.out.println();
     }
+
+    public static void main(String[] args) {
+        SecureRandom generator = new SecureRandom();
+
+        int[] data = new int[10]; // create array
+
+        for (int i = 0; i < data.length; i++) // populate array
+            data[i] = 10 + generator.nextInt(90);
+
+
+        System.out.printf("Unsorted array:%n%s%n%n",
+                Arrays.toString(data)); // display array
+
+        System.out.printf("Sorted array:%n%s%n%n",
+                Arrays.toString(data)); // display array
+    }
+
 }
