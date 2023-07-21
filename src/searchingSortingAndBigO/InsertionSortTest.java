@@ -56,6 +56,7 @@ public class InsertionSortTest {
         for (int i = 0; i < data.length; i++) // populate array
             data[i] = 10 + generator.nextInt(90);
 
+
         System.out.printf("Unsorted array:%n%s%n%n",
                 Arrays.toString(data)); // display array
 
