@@ -59,6 +59,7 @@ public class InsertionSortTest {
 
         System.out.printf("Unsorted array:%n%s%n%n",
                 Arrays.toString(data)); // display array
+        insertionSort(data); // sort array
 
         System.out.printf("Sorted array:%n%s%n%n",
                 Arrays.toString(data)); // display array
