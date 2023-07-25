@@ -76,4 +76,19 @@ public class MergeSortTest {
                 subarrayString(data, left, right));
     } // end method merge
 
+    // method to output certain values in array
+    private static String subarrayString(int[] data, int low, int high) {
+        StringBuilder temporary = new StringBuilder();
+
+        // output spaces for alignment
+        for (int i = 0; i < low; i++)
+            temporary.append(" ");
+
+        // output elements left in array
+        for (int i = low; i <= high; i++)
+            temporary.append(" " + data[i]);
+
+        return temporary.toString();
     }
+
+}
