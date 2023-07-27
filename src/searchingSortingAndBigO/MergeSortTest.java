@@ -105,6 +105,7 @@ public class MergeSortTest {
 
         System.out.printf("Unsorted array:%n%s%n%n",
                 Arrays.toString(data)); // display array
+                mergeSort(data); // sort array
 
         System.out.printf("Sorted array:%n%s%n%n",
                 Arrays.toString(data)); // display array
