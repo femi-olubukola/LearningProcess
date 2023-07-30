@@ -18,4 +18,13 @@ public class OverloadedMethods {
         System.out.printg("%nArray characterArray contains:%n");
         printArray(characterArray); // pass a Character array
     }
+
+    // method printArray to print Integer array
+    public static void printArray(Integer[] inputArray) {
+        // display array elements
+        for (Integer element : inputArray)
+            System.out.printf("%s ", element);
+
+        System.out.println();
+    }
 }
