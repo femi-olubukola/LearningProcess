@@ -27,4 +27,13 @@ public class OverloadedMethods {
 
         System.out.println();
     }
+
+    // method printArray to print Double array
+    public static void printArray(Double[] inputArray) {
+        // display array elements
+        for (Double element : inputArray)
+            System.out.printf("%s ", element);
+
+        System.out.println();
+    }
 }
