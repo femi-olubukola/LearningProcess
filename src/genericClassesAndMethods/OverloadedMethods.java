@@ -36,4 +36,13 @@ public class OverloadedMethods {
 
         System.out.println();
     }
+
+    // method printArray to print Character array
+    public static void printArray(Character[] inputArray) {
+        // display array elements
+        for (Character element : inputArray)
+            System.out.printf("%s ", element);
+
+        System.out.println();
+    }
 }
