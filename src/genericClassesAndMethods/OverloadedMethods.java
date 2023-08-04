@@ -15,7 +15,7 @@ public class OverloadedMethods {
         System.out.printf("%nArray doubleArray contains:%n");
         printArray(doubleArray); // pass a Double array
 
-        System.out.printg("%nArray characterArray contains:%n");
+        System.out.printf("%nArray characterArray contains:%n");
         printArray(characterArray); // pass a Character array
     }
 
