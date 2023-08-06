@@ -1,5 +1,7 @@
 package genericClassesAndMethods;
 
+// Printing array elements using generic method printArray.
+
 public class GenericMethodTest {
 
     public static void main(String[] args) {
@@ -11,5 +13,15 @@ public class GenericMethodTest {
 
         System.out.printf("Array integerArray contains:%n");
         printArray(integerArray); // pass an Integer array
+    }
+
+    // generic method printArray
+    public static <T> void printArray(T[] inputArray) {
+
+        // display array elements
+        for (T element : inputArray)
+            System.out.printf("%s ", element);
+
+        System.out.println();
     }
 }
