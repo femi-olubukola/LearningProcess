@@ -12,7 +12,13 @@ public class GenericMethodTest {
         Character[] charArray = {'H', 'E', 'L', 'L', 'O'};
 
         System.out.printf("Array integerArray contains:%n");
-        printArray(integerArray); // pass an Integer array
+        printArray(intArray); // pass an Integer array
+
+        System.out.printf("%nArray doubleArray contains:%n");
+        printArray(doubleArray); // pass a Double array
+
+        System.out.printf("%nArray characterArray contains:%n");
+        printArray(charArray); // pass a Character array
     }
 
     // generic method printArray
