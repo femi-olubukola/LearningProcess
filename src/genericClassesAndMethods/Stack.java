@@ -11,4 +11,11 @@ public class Stack<T> {
 
         this(10); // default stack size
     }
+
+    // constructor creates a stack of the specified number of elements
+    public Stack(int capacity) {
+
+        int initCapacity = capacity > 0 ? capacity : 10; // validate
+        elements = new ArrayList<T>(initCapacity); // create ArrayList
+    }
 }
