@@ -2,6 +2,9 @@ package genericClassesAndMethods;
 
 // Stack generic class declaration.
 
+import java.util.ArrayList;
+import java.util.EmptyStackException;
+
 public class Stack<T> {
 
     private final ArrayList<T> elements; // ArrayList stores stack elements
@@ -21,5 +24,14 @@ public class Stack<T> {
     // push element onto stack
     public void push(T pushValue) {
         elements.add(pushValue); // place pushValue on Stack
+    }
+
+    // return the top element if not empty; else throw EmptyStackException
+    public T pop() {
+        if (elements.isEmpty()) // if stack is empty
+            throw new EmptyStackException("Stack is empty, cannot pop");
+
+        // remove and return top element of Stack
+        return elements.remove(elements.size() - 1);
     }
 }
