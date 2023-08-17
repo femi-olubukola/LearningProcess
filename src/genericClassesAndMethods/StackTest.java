@@ -1,6 +1,7 @@
 package genericClassesAndMethods;
 
 // Stack generic class test program.
+
 public class StackTest {
 
     public static void main(String[] args) {
@@ -19,5 +20,16 @@ public class StackTest {
         // push elements of integerElements onto integerStack
         testPushInteger(integerStack, integerElements);
         testPopInteger(integerStack); // pop from integerStack
+    }
+
+    // test push method with double stack
+    private static void testPushDouble(Stack<Double> stack, double[] values) {
+        System.out.printf("%nPushing elements onto doubleStack%n");
+
+        // push elements to Stack
+        for (double value : values) {
+            System.out.printf("%.1f ", value);
+
+        }
     }
 }
