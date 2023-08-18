@@ -29,6 +29,7 @@ public class StackTest {
         // push elements to Stack
         for (double value : values) {
             System.out.printf("%.1f ", value);
+            stack.push(value); // push onto doubleStack
 
         }
     }
