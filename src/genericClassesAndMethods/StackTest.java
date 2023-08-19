@@ -30,7 +30,28 @@ public class StackTest {
         for (double value : values) {
             System.out.printf("%.1f ", value);
             stack.push(value); // push onto doubleStack
+        }
+    }
 
+    // test pop method with double stack
+    private static void testPopDouble(Stack<Double> stack) {
+        // pop elements from stack
+        try
+        {
+            System.out.printf("%nPopping elements from doubleStack%n");
+            double popValue; // store element removed from stack
+
+            // remove all elements from Stack
+            while (true)
+                {
+
+                System.out.printf("%.1f ", popValue);
+                }
+        }
+        catch(EmptyStackException emptyStackException)
+        {
+            System.err.println();
+            emptyStackException.printStackTrace();
         }
     }
 }
