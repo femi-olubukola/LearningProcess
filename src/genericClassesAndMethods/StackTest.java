@@ -44,7 +44,7 @@ public class StackTest {
             // remove all elements from Stack
             while (true)
                 {
-
+                    popValue = stack.pop(); // pop from doubleStack
                 System.out.printf("%.1f ", popValue);
                 }
         }
