@@ -54,4 +54,15 @@ public class StackTest {
             emptyStackException.printStackTrace();
         }
     }
+
+    // test push method with integer stack
+    private static void testPushInteger(Stack<Integer> stack, int[] values) {
+        System.out.printf("%nPushing elements onto integerStack%n");
+
+        // push elements to Stack
+        for (int value : values) {
+            System.out.printf("%d ", value);
+
+        }
+    }
 }
