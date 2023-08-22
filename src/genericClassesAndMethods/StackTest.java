@@ -62,7 +62,7 @@ public class StackTest {
         // push elements to Stack
         for (int value : values) {
             System.out.printf("%d ", value);
-
+            stack.push(value); // push onto integerStack
         }
     }
 }
