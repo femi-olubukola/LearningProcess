@@ -65,4 +65,23 @@ public class StackTest {
             stack.push(value); // push onto integerStack
         }
     }
+
+    // test pop method with integer stack
+    private static void testPopInteger(Stack<Integer> stack) {
+        // pop elements from stack
+        try {
+            System.out.printf("%nPopping elements from integerStack%n");
+            int popValue; // store element removed from stack
+
+            // remove all elements from Stack
+            while (true) {
+
+                System.out.printf("%d ", popValue);
+            }
+        }
+        catch(EmptyStackException emptyStackException) {
+            System.err.println();
+            emptyStackException.printStackTrace();
+        }
+    }
 }
