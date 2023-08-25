@@ -75,7 +75,7 @@ public class StackTest {
 
             // remove all elements from Stack
             while (true) {
-
+                popValue = stack.pop(); // pop from intStack
                 System.out.printf("%d ", popValue);
             }
         }
