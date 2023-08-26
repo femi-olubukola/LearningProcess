@@ -13,6 +13,12 @@ public class StackTest2 {
         Stack<Double> doubleStack = new Stack<>(5);
         Stack<Integer> integerStack = new Stack<>();
 
+        // push elements of doubleElements onto doubleStack
+        testPush("doubleStack", doubleStack, doubleElements);
+        testPop("doubleStack", doubleStack); // pop from doubleStack
 
+        // push elements of integerElements onto integerStack
+        testPush("integerStack", integerStack, integerElements);
+        testPop("integerStack", integerStack); // pop from integerStack
     }
 }
