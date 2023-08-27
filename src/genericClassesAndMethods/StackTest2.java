@@ -21,4 +21,17 @@ public class StackTest2 {
         testPush("integerStack", integerStack, integerElements);
         testPop("integerStack", integerStack); // pop from integerStack
     }
+
+    // generic method testPush pushes elements onto a Stack
+    public static <T> void testPush(String name , Stack<T> stack,
+                                    T[] elements) {
+
+        System.out.printf("%nPushing elements onto %s%n", name);
+
+        // push elements onto Stack
+        for (T element : elements) {
+            System.out.printf("%s ", element);
+            stack.push(element); // push element onto stack
+        }
+    }
 }
