@@ -34,4 +34,28 @@ public class StackTest2 {
             stack.push(element); // push element onto stack
         }
     }
+
+    // generic method testPop pops elements from a Stack
+    public static <T> void testPop(String name, Stack<T> stack) {
+
+        // pop elements from stack
+        try
+        {
+            System.out.printf("%nPopping elements from %s%n", name);
+
+
+            // remove all elements from Stack
+            while (true)
+                {
+                popValue = stack.pop();
+                System.out.printf("%s ", popValue);
+                }
+            }
+
+        catch(EmptyStackException emptyStackException)
+        {
+            System.out.println();
+            emptyStackException.printStackTrace();
+        }
+    }
 }
