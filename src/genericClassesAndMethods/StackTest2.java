@@ -42,7 +42,7 @@ public class StackTest2 {
         try
         {
             System.out.printf("%nPopping elements from %s%n", name);
-
+            T popValue; // store element removed from stack
 
             // remove all elements from Stack
             while (true)
