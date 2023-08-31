@@ -25,4 +25,16 @@ public class RawTypeTest {
         testPush("integerStack", integerStack, integerElements);
         testPop("integerStack", integerStack);
     }
+
+    // generic method pushes elements onto stack
+    public static <T> void testPush(String name, Stack<T> stack, T[] elements) {
+        System.out.printf("%nPushing elements onto %s%n", name);
+
+        // push elements onto Stack
+        for (T element : elements)
+        {
+            System.out.printf("%s ", element);
+            stack.push(element); // push element onto stack
+        }
+    }
 }
