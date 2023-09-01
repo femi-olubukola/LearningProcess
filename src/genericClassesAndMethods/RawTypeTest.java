@@ -37,4 +37,26 @@ public class RawTypeTest {
             stack.push(element); // push element onto stack
         }
     }
+
+    // generic method testPop pops elements from stack
+    public static <T> void testPop(String name, Stack<T> stack) {
+        // pop elements from stack
+        try
+        {
+            System.out.printf("%nPopping elements from %s%n", name);
+            T popValue; // store element removed from stack
+
+            // remove elements from Stack
+            while (true)
+                {
+                popValue = stack.pop(); // pop from stack
+                System.out.printf("%s ", popValue);
+                }
+        } // end try
+        catch(EmptyStackException emptyStackException)
+        {
+            System.out.println();
+            emptyStackException.printStackTrace();
+        }
+    }
 }
