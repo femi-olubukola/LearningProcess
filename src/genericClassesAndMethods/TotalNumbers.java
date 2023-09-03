@@ -11,5 +11,8 @@ public class TotalNumbers {
 
         for (Number element : numbers)
             numberList.add(element); // place each number in numberList
+
+        System.out.printf("numberList contains: %s%n", numberList);
+        System.out.printf("Total of the elements in numberList: %.1f%n", sum(numberList));
     }
 }
