@@ -15,4 +15,17 @@ public class TotalNumbers {
         System.out.printf("numberList contains: %s%n", numberList);
         System.out.printf("Total of the elements in numberList: %.1f%n", sum(numberList));
     }
+
+    // calculate total of ArrayList elements
+    public static double sum(ArrayList<Number> list) {
+
+        double total = 0; // initialize total
+
+        // calculate sum
+        for (Number element : list)
+            total += element.doubleValue();
+
+        return total;
+    }
+
 }
