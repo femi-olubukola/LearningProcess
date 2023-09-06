@@ -1,5 +1,7 @@
 package genericClassesAndMethods;
 
+// Totaling the numbers in an ArrayList<Number>.
+
 import java.util.ArrayList;
 
 public class TotalNumbers {
