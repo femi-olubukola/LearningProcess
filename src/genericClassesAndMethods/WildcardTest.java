@@ -17,5 +17,18 @@ public class WildcardTest {
 
         System.out.printf("integerList contains: %s%n", integerList);
         System.out.printf("Total of the elements in integerList: %.0f%n%n", sum(integerList));
+
+
+        // create, initialize and output ArrayList of Doubles, then
+        // display total of the elements
+        Double[] doubles = {1.1, 3.3, 5.5};
+        ArrayList<Double> doubleList = new ArrayList<>();
+
+        // insert elements in doubleList
+        for (Double element : doubles)
+            doubleList.add(element);
+
+        System.out.printf("doubleList contains: %s%n", doubleList);
+        System.out.printf("Total of the elements in doubleList: %.1f%n%n", sum(doubleList));
     }
 }
