@@ -2,6 +2,8 @@ package genericClassesAndMethods;
 
 // Wildcard test program.
 
+import java.util.ArrayList;
+
 public class WildcardTest {
 
     public static void main(String[] args) {
@@ -43,5 +45,16 @@ public class WildcardTest {
 
         System.out.printf("numberList contains: %s%n", numberList);
         System.out.printf("Total of the elements in numberList: %.1f%n", sum(numberList));
+    }
+
+    // total the elements; using a wildcard in the ArrayList parameter
+    public static double sum(ArrayList<? extends Number> list) {
+        double total = 0; // initialize total
+
+        // calculate sum
+        for (Number element : list)
+            total += element.doubleValue();
+
+        return total;
     }
 }
