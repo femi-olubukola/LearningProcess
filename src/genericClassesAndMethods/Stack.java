@@ -29,7 +29,7 @@ public class Stack<T> {
     // return the top element if not empty; else throw EmptyStackException
     public T pop() {
         if (elements.isEmpty()) // if stack is empty
-            throw new EmptyStackException("Stack is empty, cannot pop");
+            throw new EmptyStackException();
 
         // remove and return top element of Stack
         return elements.remove(elements.size() - 1);
