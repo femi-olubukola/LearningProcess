@@ -12,5 +12,9 @@ class ListNode<T> {
         this(object, null);
     }
 
-
+    // constructor creates ListNode that refers to the specified object and to the next ListNode
+    ListNode(T object, ListNode<T> node) {
+        data = object;
+        nextNode = node;
+    }
 }
