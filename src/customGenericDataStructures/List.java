@@ -1,5 +1,7 @@
 package customGenericDataStructures;
 
+// ListNode and List class declarations.
+
 class ListNode<T> {
 
     // package access members; List can access these directly
@@ -17,4 +19,18 @@ class ListNode<T> {
         data = object;
         nextNode = node;
     }
+
+    // return reference to data in node
+    T getData() {
+        return data;
+    }
+
+    // return reference to next node in list
+    ListNode<T> getNext() {
+        return nextNode;
+    }
+}
+
+public class List<T> {
+
 }
