@@ -33,4 +33,19 @@ class ListNode<T> {
 
 public class List<T> {
 
+    private ListNode<T> firstNode;
+    private ListNode<T> lastNode;
+    private String name; // string like "list" used in printing
+
+    // constructor creates empty List with "list" as the name
+    public List() {
+        this("list");
+    }
+
+    // constructor creates an empty List with a name
+    public List(String listName) {
+        name = listName;
+        firstNode = lastNode = null;
+    }
+
 }
