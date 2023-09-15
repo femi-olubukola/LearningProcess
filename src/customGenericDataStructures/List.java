@@ -48,4 +48,12 @@ public class List<T> {
         firstNode = lastNode = null;
     }
 
+    // insert item at front of list
+    public void insertAtFront(T insertItem) {
+        if (isEmpty()) // firstNode and lastNode refer to same object
+            firstNode = lastNode = new ListNode<T>(insertItem);
+        else // firstNode refers to new node
+        firstNode = new ListNode<T>(insertItem, firstNode);
+    }
+
 }
