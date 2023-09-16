@@ -56,4 +56,12 @@ public class List<T> {
         firstNode = new ListNode<T>(insertItem, firstNode);
     }
 
+    // insert item at end of list
+    public void insertAtBack(T insertItem) {
+        if (isEmpty()) // firstNode and lastNode refer to same object
+            firstNode = lastNode = new ListNode<T>(insertItem);
+        else // lastNode's nextNode refers to new node
+        lastNode = lastNode.nextNode = new ListNode<T>(insertItem);
+    }
+
 }
