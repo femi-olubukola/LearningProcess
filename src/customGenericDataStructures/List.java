@@ -64,4 +64,20 @@ public class List<T> {
         lastNode = lastNode.nextNode = new ListNode<T>(insertItem);
     }
 
+    // remove first node from List
+    public T removeFromFront() throws EmptyListException {
+        if (isEmpty()) // throw exception if List is empty
+            throw new EmptyListException(name);
+
+        T removedItem = firstNode.data; // retrieve data being removed
+
+        // update references firstNode and lastNode
+        if (firstNode == lastNode)
+            firstNode = lastNode = null;
+        else
+        firstNode = firstNode.nextNode;
+
+        return removedItem; // return removed node data
+    }
+
 }
