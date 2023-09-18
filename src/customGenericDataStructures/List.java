@@ -80,4 +80,12 @@ public class List<T> {
         return removedItem; // return removed node data
     }
 
+    // remove first node from List
+    public T removeFromBack() throws EmptyListException {
+        if (isEmpty()) // throw exception if List is empty
+            throw new EmptyListException(name);
+
+        T removedItem = lastNode.data; // retrieve data being removed
+
+    }
 }
