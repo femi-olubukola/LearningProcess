@@ -87,5 +87,14 @@ public class List<T> {
 
         T removedItem = lastNode.data; // retrieve data being removed
 
+        // update references firstNode and lastNode
+        if (firstNode == lastNode)
+            firstNode = lastNode = null;
+        else // locate new last node
+        {
+            ListNode<T> current = firstNode;
+        }
+
+        return removedItem; // return removed node data
     }
 }
