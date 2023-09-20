@@ -93,6 +93,13 @@ public class List<T> {
         else // locate new last node
         {
             ListNode<T> current = firstNode;
+
+            // loop while current node does not refer to lastNode
+            while (current.nextNode != lastNode)
+                current = current.nextNode;
+
+            lastNode = current; // current is new lastNode
+            current.nextNode = null;
         }
 
         return removedItem; // return removed node data
