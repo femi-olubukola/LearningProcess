@@ -104,4 +104,9 @@ public class List<T> {
 
         return removedItem; // return removed node data
     }
+
+    // determine whether list is empty
+    public boolean isEmpty() {
+        return firstNode == null; // return true if list is empty
+    }
 }
