@@ -109,4 +109,15 @@ public class List<T> {
     public boolean isEmpty() {
         return firstNode == null; // return true if list is empty
     }
+
+    // output list contents
+    public void print() {
+        if (isEmpty()) {
+            System.out.printf("Empty %s%n", name);
+            return;
+        }
+
+        System.out.printf("The %s is: ", name);
+        ListNode<T> current = firstNode;
+    }
 }
