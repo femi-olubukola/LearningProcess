@@ -119,5 +119,14 @@ public class List<T> {
 
         System.out.printf("The %s is: ", name);
         ListNode<T> current = firstNode;
+
+        // while not at end of list, output current node's data
+        while (current != null) {
+            System.out.printf("%s ", current.data);
+            current = current.nextNode;
+        }
+
+        System.out.println();
     }
+
 }
