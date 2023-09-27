@@ -15,5 +15,14 @@ public class ListTest {
         list.print();
         list.insertAtBack(5);
         list.print();
+
+        // remove objects from list; print after each removal
+        try {
+            int removedItem = list.removeFromFront();
+            System.out.printf("%n%d removed%n", removedItem);
+            list.print();
+        }
+
+
     }
 }
