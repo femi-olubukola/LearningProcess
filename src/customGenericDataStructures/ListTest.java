@@ -23,6 +23,8 @@ public class ListTest {
             list.print();
         }
 
-
+        catch (EmptyListException emptyListException) {
+            emptyListException.printStackTrace();
+        }
     }
 }
