@@ -25,6 +25,10 @@ public class ListTest {
             removedItem = list.removeFromFront();
             System.out.printf("%n%d removed%n", removedItem);
             list.print();
+
+            removedItem = list.removeFromBack();
+            System.out.printf("%n%d removed%n", removedItem);
+            list.print();
         }
 
         catch (EmptyListException emptyListException) {
