@@ -1,5 +1,7 @@
 package customGenericDataStructures;
 
+// ListTest class to demonstrate List capabilities.
+
 public class ListTest {
 
     public static void main(String[] args) {
