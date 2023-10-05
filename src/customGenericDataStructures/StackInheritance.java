@@ -9,5 +9,9 @@ public class StackInheritance {
         super("stack");
     }
 
+    // add object to stack
+    public void push(T object) {
+        insertAtFront(object);
+    }
 
 }
