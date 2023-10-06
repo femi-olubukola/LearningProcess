@@ -14,4 +14,9 @@ public class StackInheritance {
         insertAtFront(object);
     }
 
+    // remove object from stack
+    public T pop() throws EmptyListException {
+        return removeFromFront();
+    }
+
 }
