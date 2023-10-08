@@ -17,5 +17,20 @@ public class StackInheritanceTest {
         stack.print();
         stack.push(5);
         stack.print();
+
+        // remove items from stack
+        try {
+            int removedItem;
+
+            while (true)
+                {
+
+                System.out.printf("%n%d popped%n", removedItem);
+
+                }
+            }
+        catch (EmptyListException emptyListException) {
+            emptyListException.printStackTrace();
+        }
     }
 }
