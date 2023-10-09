@@ -24,9 +24,9 @@ public class StackInheritanceTest {
 
             while (true)
                 {
-
-                System.out.printf("%n%d popped%n", removedItem);
-
+                    removedItem = stack.pop(); // use pop method
+                    System.out.printf("%n%d popped%n", removedItem);
+                    stack.print();
                 }
             }
         catch (EmptyListException emptyListException) {
