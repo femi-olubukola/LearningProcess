@@ -11,4 +11,9 @@ public class StackComposition<T> {
         stackList = new List<T>("stack");
     }
 
+    // add object to stack
+    public void push(T object) {
+        stackList.insertAtFront(object);
+    }
+
 }
