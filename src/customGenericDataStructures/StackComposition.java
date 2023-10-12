@@ -16,4 +16,9 @@ public class StackComposition<T> {
         stackList.insertAtFront(object);
     }
 
+    // remove object to stack
+    public T pop() throws EmptyListException {
+        return stackList.removeFromFront();
+    }
+
 }
