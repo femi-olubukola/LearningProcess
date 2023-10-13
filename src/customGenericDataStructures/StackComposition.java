@@ -21,4 +21,9 @@ public class StackComposition<T> {
         return stackList.removeFromFront();
     }
 
+    // determine if stack is empty
+    public boolean isEmpty() {
+        return stackList.isEmpty();
+    }
+
 }
