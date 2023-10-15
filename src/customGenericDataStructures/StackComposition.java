@@ -26,4 +26,9 @@ public class StackComposition<T> {
         return stackList.isEmpty();
     }
 
+    // output stack contents
+    public void print() {
+        stackList.print();
+    }
+
 }
