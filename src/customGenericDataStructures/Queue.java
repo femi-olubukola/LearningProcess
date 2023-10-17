@@ -11,5 +11,8 @@ public class Queue {
         queueList = new List<T>("queue");
     }
 
-
+    // add object to queue
+    public void enqueue(T object) {
+        queueList.insertAtBack(object);
+    }
 }
