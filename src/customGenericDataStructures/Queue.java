@@ -15,4 +15,9 @@ public class Queue {
     public void enqueue(T object) {
         queueList.insertAtBack(object);
     }
+
+    // remove object from queue
+    public T dequeue() throws EmptyListException {
+        return queueList.removeFromFront();
+    }
 }
