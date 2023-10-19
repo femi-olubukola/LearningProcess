@@ -20,4 +20,9 @@ public class Queue {
     public T dequeue() throws EmptyListException {
         return queueList.removeFromFront();
     }
+
+    // determine if queue is empty
+    public boolean isEmpty() {
+        return queueList.isEmpty();
+    }
 }
