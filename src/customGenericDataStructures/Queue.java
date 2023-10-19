@@ -25,4 +25,9 @@ public class Queue {
     public boolean isEmpty() {
         return queueList.isEmpty();
     }
+
+    // output queue contents
+    public void print() {
+        queueList.print();
+    }
 }
