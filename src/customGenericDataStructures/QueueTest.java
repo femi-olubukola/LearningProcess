@@ -17,5 +17,19 @@ public class QueueTest {
         queue.print();
         queue.enqueue(5);
         queue.print();
+
+        // remove objects from queue
+        try {
+            int removedItem;
+
+            while (true) {
+
+                System.out.printf("%n%d dequeued%n", removedItem);
+
+            }
+        }
+        catch (EmptyListException emptyListException) {
+            emptyListException.printStackTrace();
+        }
     }
 }
