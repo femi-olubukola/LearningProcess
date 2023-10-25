@@ -24,7 +24,9 @@ public class QueueTest {
 
             while (true) {
 
+                removedItem = queue.dequeue(); // use dequeue method
                 System.out.printf("%n%d dequeued%n", removedItem);
+                queue.print();
 
             }
         }
