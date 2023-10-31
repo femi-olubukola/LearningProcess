@@ -3,7 +3,7 @@ package customGenericDataStructures;
 // TreeNode and Tree class declarations for a binary search tree.
 
 // class TreeNode definition
-public class TreeNode<T extends Comparable<T>> {
+class TreeNode<T extends Comparable<T>> {
 
     // package access members
     TreeNode<T> leftNode;
@@ -36,3 +36,22 @@ public class TreeNode<T extends Comparable<T>> {
             }
         }
 } // end class TreeNode
+
+// class Tree definition
+public class Tree<T extends Comparable<T>> {
+    private TreeNode<T> root;
+
+    // constructor initializes an empty Tree of integers
+    public Tree() {
+        root = null;
+    }
+
+    // insert a new node in the binary search tree
+    public void insertNode(T insertValue) {
+        if (root == null)
+            root = new TreeNode<T>(insertValue); // create root node
+        else
+            root.insert(insertValue); // call the insert method
+    }
+
+}
