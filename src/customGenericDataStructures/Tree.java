@@ -54,4 +54,19 @@ public class Tree<T extends Comparable<T>> {
             root.insert(insertValue); // call the insert method
     }
 
+    // begin preorder traversal
+    public void preorderTraversal() {
+        preorderHelper(root);
+    }
+
+    // recursive method to perform preorder traversal
+    private void preorderHelper(TreeNode<T> node) {
+        if (node == null)
+            return;
+
+        System.out.printf("%s ", node.data); // output node data
+        preorderHelper(node.leftNode); // traverse left subtree
+        preorderHelper(node.rightNode); // traverse right subtree
+    }
+
 }
