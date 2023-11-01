@@ -69,4 +69,19 @@ public class Tree<T extends Comparable<T>> {
         preorderHelper(node.rightNode); // traverse right subtree
     }
 
+    // begin inorder traversal
+    public void inorderTraversal() {
+        inorderHelper(root);
+    }
+
+    // recursive method to perform inorder traversal
+    private void inorderHelper(TreeNode<T> node) {
+        if (node == null)
+            return;
+
+        inorderHelper(node.leftNode); // traverse left subtree
+        System.out.printf("%s ", node.data); // output node data
+        inorderHelper(node.rightNode); // traverse right subtree
+    }
+
 }
