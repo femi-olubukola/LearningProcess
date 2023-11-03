@@ -84,4 +84,19 @@ public class Tree<T extends Comparable<T>> {
         inorderHelper(node.rightNode); // traverse right subtree
     }
 
+    // begin postorder traversal
+    public void postorderTraversal() {
+        postorderHelper(root);
+    }
+
+    // recursive method to perform postorder traversal
+    private void postorderHelper(TreeNode<T> node) {
+        if (node == null)
+            return;
+
+        postorderHelper(node.leftNode); // traverse left subtree
+        postorderHelper(node.rightNode); // traverse right subtree
+        System.out.printf("%s ", node.data); // output node data
+    }
+
 }
