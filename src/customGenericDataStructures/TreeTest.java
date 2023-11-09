@@ -24,5 +24,9 @@ public class TreeTest {
 
         System.out.printf("%n%nInorder traversal%n");
         tree.inorderTraversal();
+
+        System.out.printf("%n%nPostorder traversal%n");
+        tree.postorderTraversal();
+        System.out.println();
     }
 }
