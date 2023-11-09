@@ -17,7 +17,12 @@ public class TreeTest {
             int value = randomNumber.nextInt(100);
             System.out.printf("%d ", value);
             tree.insertNode(value);
-
         }
+
+        System.out.printf("%n%nPreorder traversal%n");
+        tree.preorderTraversal();
+
+        System.out.printf("%n%nInorder traversal%n");
+        tree.inorderTraversal();
     }
 }
